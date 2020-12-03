@@ -1,0 +1,62 @@
+
+/*------------------------------------------------CONTENIDO-------------------------------------------- */
+
+.contenido {
+    font-family: arial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.contenido hgroup {
+    color: rgba(86, 218, 59, 0.582);
+    font-size: 15px;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contenido figure{
+    margin: 0px;
+}
+.contenido img {
+    width: 100%;
+}
+
+table {
+    width: 98%;
+    margin: 30px;
+    text-align: center;
+    background-color: #ffffff18;
+    border: 2px ridge rgba(33, 24, 71, 0.493);
+    border-collapse: collapse;
+}
+
+table thead {
+    background-color: rgba(100, 44, 114, 0.404);
+}
+
+th, td {
+    padding: 0px 10px;
+    border: 2px ridge rgba(33, 24, 71, 0.521);
+}
+/* ----------PARA COMPUTADORAS--------- */
+
+@media screen and (min-width: 660px) {
+
+    .contenido hgroup{
+        background-color: unset;
+        font-size: unset;
+    }
+    
+    .contenido figure img {
+        border-radius: 25%;
+    }
+
+    table {
+        width: unset;
+        font-size: unset;
+    }
+    
+    }

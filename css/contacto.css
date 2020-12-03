@@ -1,0 +1,69 @@
+
+
+/*------------------------------------------------CONTENIDO-------------------------------------------- */
+
+.contenido {
+    font-family: arial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenido iframe {
+    height: 320px;
+    width: 70%;
+    margin: 30px;
+}
+
+
+#form-consulta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#form-consulta input{
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.76);
+    border: 0px;
+}
+label{
+    padding: 2px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    color: rgb(22, 21, 21);
+    background-color: rgb(136, 183, 199);
+    border-radius: 12px;
+}
+
+table {
+    text-align: center;
+    margin-top: 60px;
+}
+
+table thead {
+    background-color: rgba(38, 155, 38, 0.534);
+}
+
+/*---------------------------------------------- CONTENIDO --------------------------------------------- */
+
+
+/* ----------PARA COMPUTADORAS--------- */
+
+@media screen and (min-width: 660px) {
+    .contenido {
+        font-size: unset;
+    }
+
+    .contenido iframe {
+        height: 500px;
+        width: 60%;
+    }
+    #form-consulta input{
+        font-size: unset;
+    }
+    table {
+        font-size: unset;
+    }
+    }

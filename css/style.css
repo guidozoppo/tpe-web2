@@ -1,0 +1,147 @@
+body {
+    font-size: 20px;
+    margin: 0px;
+    background-image: url(../images/fondo.jpg);
+    background-repeat: inherit;
+    color: white;
+}
+
+/*----------------------------------------------- ENCABEZADO ----------------------------------------*/
+
+.navegacion {
+    padding: 10px;
+    display: flex;
+    justify-content: none;
+    flex-direction: column;
+    background-color: rgba(62, 46, 73, 0.411);
+    border-bottom: 10px;
+    border-color:rgba(136, 183, 199, 0.651);
+    border-bottom-style: ridge;
+    font-family: arial;
+}
+
+.navegacion.show {
+    background-color: rgba(5, 38, 49, 0.418);
+    border-bottom-right-radius: 100%;
+}
+
+#btn-menu {
+    margin : 4px;
+}
+
+.botonera {
+    display: none;
+    padding: 0px;
+}
+
+.botonera li {
+    list-style: none;
+    margin: 5px;
+}
+
+.botonera a {
+    text-decoration: none;
+    color: white;
+}
+
+.botonera a:hover {
+    color: rgba(255, 123, 0, 0.904);
+    transition: all .5s ease-in-out;
+}
+
+.botonera.show {
+    display: flex;
+    flex-direction: column;
+}
+.pie{
+    padding: 10px;
+    display: flex;
+    justify-content: none;
+    background-color: rgba(62, 46, 73, 0.411);
+    border-top: 10px;
+    border-color:rgba(136, 183, 199, 0.651);
+    border-top-style: ridge;
+    font-family: arial;
+}
+.pie ul{
+    list-style: none;
+}
+
+button {
+    padding: 5px;
+    color: rgb(22, 21, 21);
+    background-color: rgb(136, 183, 199);
+    border-radius: 12px;
+}
+
+button a {
+    text-decoration: none;
+}
+
+/* -------PARA COMPUTADORAS-------- */
+    .pagination nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .pagination nav ul a{
+        text-decoration: none;
+        color: yellow;
+        padding: 5px; 
+        /* display: flex;
+        flex-direction: row;
+        */
+    }
+
+    li.apuntador{
+        color: yellow;
+        height: 30px;
+        width: 19.47px;
+    }
+
+    .pagination h3{
+        color: yellow;
+    }
+
+    .producto label{
+        padding: 5px;
+        color: rgb(22, 21, 21);
+        background-color: rgb(136, 183, 199);
+        border-radius: 12px;
+    }
+    
+    @media screen and (min-width: 660px) {
+    body {
+        font-size: 17px;
+    }
+
+    .botonera {
+        display: flex;
+    }
+
+    #btn-menu {
+        display: none;
+    }
+
+    .navegacion {
+        font-size: unset;
+        padding: unset;
+        background-color: rgba(62, 46, 73, 0.411);
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .botonera.show {
+        flex-direction: row;
+    }
+
+    .navegacion.show {
+        background-color: rgba(62, 46, 73, 0.411);
+        border-bottom-right-radius: 0%;
+    }
+
+    .pie{
+        font-size: unset;
+    }
+}

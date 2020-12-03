@@ -1,0 +1,156 @@
+
+
+/*------------------------------------------------CONTENIDO-------------------------------------------- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenido {
+    font-family: arial;
+    justify-content: center;
+}
+
+.eleccion-producto {
+    font-size: 20px;
+    width: 75%;
+}
+
+.producto {
+    background-color: rgba(62, 46, 73, 0.411);
+    padding: 20px 10px;
+    text-align: center;
+    align-items: center;
+    margin: 40px;
+}
+.producto ul{
+    text-align: left;
+    padding: 0px;
+}
+.producto label{
+    padding: 5px;
+    color: rgb(22, 21, 21);
+    background-color: rgb(136, 183, 199);
+    border-radius: 12px;
+}
+
+#idGuitarra label{
+    background-color: red;
+}
+
+.eleccion-producto figure{
+    margin: 0px;
+}
+.eleccion-producto img{
+    width: 100%;
+}
+
+.producto li {
+    list-style: none;
+}
+.conteinerform{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #f2f2f23d;
+    padding: 20px;
+}
+#formulario div{
+    margin-bottom: 30px;
+    display: flex;
+}
+#formulario img{
+    height: 30px;
+}
+#nombre-producto{
+    margin: 0px;
+}
+#formulario select, button, label, p, input{
+    margin: 15px 0px;
+    font-size: 20px;
+    width: 100%;
+}
+
+
+
+#formulario input{
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: 2px;
+    border-bottom: black;
+    border-bottom-style: solid;
+}
+
+#formulario input[type=radio]{
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+#lbl-captcha {
+    padding: 5px;
+    color: rgb(22, 21, 21);
+    background-color: rgb(136, 183, 199);
+    border-radius: 12px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: rgba(255, 255, 255, 0.575);
+}
+
+.eleccion-producto .marcas li {
+    list-style: none;
+    margin: 10px 40px 0px 0px;
+}
+
+.eleccion-producto .marcas a {
+    text-decoration: none;
+    color: rgb(194, 190, 190);
+}
+
+.eleccion-producto .marcas {
+    background-image: url(../images/fondo-marca.png);    
+    width: 18%;
+    text-align: center;
+    border: 10px;
+    border-color:rgba(136, 183, 199, 0.651);
+    border-right-style: groove;
+}
+
+/* ----------PARA COMPUTADORAS--------- */
+
+@media screen and (min-width: 660px) {
+
+.eleccion-producto {
+    font-size: unset;
+    display: flex;
+    justify-content: space-between;
+}
+.conteinerform{
+    font-size: unset;
+}
+#formulario div{
+    align-items: center;
+}
+#formulario input{
+    font-size: unset;
+    height: unset;
+    width: unset;
+}
+#formulario select, button, label, p{
+    font-size: unset;
+    width: unset;
+}
+#formulario input[type=radio]{
+    margin: unset;
+    width: 20px;
+    height: unset;
+}
+
+}
+
+/*------------------------------------------------ ...........-----------------------------------------------*/
+
