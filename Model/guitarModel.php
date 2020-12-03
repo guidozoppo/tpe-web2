@@ -40,9 +40,15 @@ class guitarModel{
         $sentencia->execute(array($guitarra_id));
     }
     
-    function agregarGuitarra ($nombre, $modelo, $precio, $descripcion, $id_marca) {
-        $sentencia = $this->db->prepare("INSERT INTO guitarra(nombre_guitarra, modelo, precio, descripcion, id_marca) VALUES(?,?,?,?,?)");
-        $sentencia->execute(array($nombre,$modelo,$precio,$descripcion, $id_marca));
+    function agregarGuitarra ($nombre, $modelo, $precio, $descripcion, $id_marca, $fileTmp = null) {
+        $imageName = '';
+        if ($fileTmp) {
+            $imageName = uniqid();
+            move_uploaded_file($fileTmp, 'C:/xamppp/htdocs/tpe-web2-p2/images/products/'.$imageName);
+        }
+        
+        $sentencia = $this->db->prepare("INSERT INTO guitarra(nombre_guitarra, modelo, precio, descripcion, id_marca, imagen) VALUES(?,?,?,?,?,?)");
+        $sentencia->execute(array($nombre, $modelo, $precio, $descripcion, $id_marca, $imageName));
     }
 
     function infoProducto($producto_id){

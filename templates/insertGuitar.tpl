@@ -14,7 +14,7 @@
     <div class="container">
         <h2>Agregar Guitarra</h2>
 
-        <form action="insert" method="post">
+        <form action="insert" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="nombre">Nombre</label>
                 <input class="form-control" id="nombre" name="input_nombre">
@@ -41,10 +41,10 @@
                 <button><a href="createMarca">Insertar Marca</a></button>
                 <button><a href="updateMarca">Modificar Marca</a></button>
             </div>
-            {*  <div class="form-group">
+             <div class="form-group">
                 <label for="imagen">Imagen</label>
-                <div><input id="imagen" type="file" name="input_imagen"></textarea></div>
-            </div> *}
+                <div><input id="imagen" type="file" name="input_imagen"></div>
+            </div>
             <button type="submit" class="btn btn-primary">Agregar Guitarra</button>
 
             <div class="alert alert-danger" role="alert">{$mensaje}</div>

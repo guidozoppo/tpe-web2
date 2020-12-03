@@ -1,16 +1,12 @@
 <?php
-/* error_reporting(E_ALL ^ E_NOTICE); */
 
 require_once "./View/View.php";
-
-//NUEVO
 require_once "./Model/guitarModel.php";
 require_once "./Model/comentarioModel.php";
 require_once "./Model/marcaModel.php";
 require_once "./View/guitarView.php";
 class guitarController{
 
-    //NUEVO
     private $guitarModel;
     private $marcaModel;
     private $comentarioModel;
@@ -18,9 +14,7 @@ class guitarController{
     private $userController;
     
     function __construct(){
-        $this->userController = new userController(); //hay que require_once userContrller.php
-        
-        //NUEVO
+        $this->userController = new userController();
         $this->guitarModel = new guitarModel();
         $this->comentarioModel = new comentarioModel();
         $this->marcaModel = new marcaModel();
@@ -84,7 +78,15 @@ class guitarController{
             $this->guitarView->showNewProductSection($marca, "Debes completar todos los campos");
             die();
         } else {
-            $this->guitarModel->agregarGuitarra($nombre, $modelo, $precio, $descripcion, $id_marca);
+
+            $_FILES["input_imagen"]["name"] = uniqid();
+            
+            if ($_FILES['input_imagen']['type'] == "image/jpg" || $_FILES['input_imagen']['type'] == "image/jpeg" || $_FILES['input_imagen']['type'] == "image/png") {
+                $this->guitarModel->agregarGuitarra($nombre, $modelo, $precio, $descripcion, $id_marca, $_FILES['input_imagen']["tmp_name"]);
+            } else {
+                $this->guitarModel->agregarGuitarra($nombre, $modelo, $precio, $descripcion, $id_marca);
+            }
+
             $this->guitarView->showNewProductSection($marca, "Guitarra agregada con exito!");
         }
     }
